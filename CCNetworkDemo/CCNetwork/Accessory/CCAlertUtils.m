@@ -46,6 +46,9 @@ static CCAlertUtils * instance = nil;
     self.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
     
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapPressed:)];
+    [self addGestureRecognizer:tap];
+    
     CGFloat whi_W = 80;
     CGFloat whi_H = 100;
     UIView * whiteView = [[UIView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 80)/2, (SCREEN_HEIGHT - 100)/2, 80, 100)];
@@ -88,6 +91,10 @@ static CCAlertUtils * instance = nil;
     CGAffineTransform scaled = CGAffineTransformScale(transform, 1.0, 1.0);
     // Apply the affine transform
     [[self viewWithTag:101] setTransform:scaled];
+}
+
+- (void)tapPressed:(UITapGestureRecognizer *)gesture {
+    [self removeFromSuperview];
 }
 
 /*
