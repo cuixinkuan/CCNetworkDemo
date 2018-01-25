@@ -51,7 +51,7 @@
 		8427033E2011FD6C0012406E /* CCBatchRequest+AnimatingAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8427033D2011FD6C0012406E /* CCBatchRequest+AnimatingAccessory.m */; };
 		84270341201202A10012406E /* CCChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84270340201202A10012406E /* CCChainRequest.m */; };
 		8427035C2016D3330012406E /* CCChainRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8427035B2016D3330012406E /* CCChainRequestAgent.m */; };
-		8427035F20173EEA0012406E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8427035D20173EEA0012406E /* README.md */; };
+		842703F62019BA530012406E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 842703F52019BA530012406E /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,8 +160,9 @@
 		84270340201202A10012406E /* CCChainRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCChainRequest.m; sourceTree = "<group>"; };
 		8427035A2016D3330012406E /* CCChainRequestAgent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCChainRequestAgent.h; sourceTree = "<group>"; };
 		8427035B2016D3330012406E /* CCChainRequestAgent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCChainRequestAgent.m; sourceTree = "<group>"; };
-		8427035D20173EEA0012406E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8427035E20173EEA0012406E /* CCNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNetwork.h; sourceTree = "<group>"; };
+		842703F42019B8750012406E /* CCNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNetwork.h; sourceTree = "<group>"; };
+		842703F52019BA530012406E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,7 +298,7 @@
 		84222A1C2007585300D89734 /* CCNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				8427035D20173EEA0012406E /* README.md */,
+				842703F52019BA530012406E /* README.md */,
 				842702FB20119C630012406E /* Accessory */,
 				842703352011E6700012406E /* AdditionalDependencies */,
 				842702E9200DEBE10012406E /* CCRequest.h */,
@@ -318,6 +319,7 @@
 				84270340201202A10012406E /* CCChainRequest.m */,
 				8427035A2016D3330012406E /* CCChainRequestAgent.h */,
 				8427035B2016D3330012406E /* CCChainRequestAgent.m */,
+				842703F42019B8750012406E /* CCNetwork.h */,
 			);
 			path = CCNetwork;
 			sourceTree = "<group>";
@@ -482,6 +484,7 @@
 				84270283200C8E7F0012406E /* loading.png in Resources */,
 				8422296220074DF400D89734 /* LaunchScreen.storyboard in Resources */,
 				8422295F20074DF400D89734 /* Assets.xcassets in Resources */,
+				842703F62019BA530012406E /* README.md in Resources */,
 				84270282200C8E7F0012406E /* loading2.png in Resources */,
 				8422295D20074DF400D89734 /* Main.storyboard in Resources */,
 				84270281200C8E7F0012406E /* loading_bg.png in Resources */,
@@ -516,7 +519,6 @@
 				84222A0F200757D700D89734 /* AFSecurityPolicy.m in Sources */,
 				84222A2020075C8900D89734 /* GetImageApi.m in Sources */,
 				84222A2C2007701800D89734 /* CCUrlArgumentsFilter.m in Sources */,
-				8427035F20173EEA0012406E /* README.md in Sources */,
 				8422296520074DF400D89734 /* main.m in Sources */,
 				842702EB200DEBE10012406E /* CCRequest.m in Sources */,
 				84222A06200757D700D89734 /* AFNetworkActivityIndicatorManager.m in Sources */,
