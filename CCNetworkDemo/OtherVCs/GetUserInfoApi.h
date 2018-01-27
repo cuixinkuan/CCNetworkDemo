@@ -12,4 +12,6 @@
 
 - (id)initWithUserId:(NSString *)userId;
 
+- (id)initWithParameters:(NSMutableDictionary *)parameters;
+
 @end

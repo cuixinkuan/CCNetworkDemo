@@ -39,7 +39,7 @@
     if (_animatingView) {
         dispatch_async(dispatch_get_main_queue(), ^{
             // TODO: show loading
-            [CCAlertUtils showLoadingAlertView:@"loading..." inView:_animatingView];
+            [CCAlertUtils showLoadingAlertView:@"loading..." inView:_animatingView withRequest:request];
             NSLog(@"--------> loading start");
         });
     }

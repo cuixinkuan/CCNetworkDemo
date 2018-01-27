@@ -20,9 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     CCNetworkConfig * config = [CCNetworkConfig sharedConfig];
-    config.baseUrl = @"http://ceair.com";
-    config.cdnUrl = @"http://****";
-    [self setupRequestFilters];
+    config.baseUrl = @"http://www.yvanwang.me";//@"https://news-at.zhihu.com";//@"http://zsc.ceair.com:80";
+//    config.cdnUrl = @"http://****";
+//    [self setupRequestFilters];
     return YES;
 }
 

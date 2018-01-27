@@ -31,10 +31,11 @@ static CCAlertUtils * instance = nil;
     return self;
 }
 
-+ (void)showLoadingAlertView:(NSString *)animatingText inView:(UIView *)animatingView {
++ (void)showLoadingAlertView:(NSString *)animatingText inView:(UIView *)animatingView withRequest:(id)request{
     CCAlertUtils * instance = [self shared];
     instance.titleLabel.text = animatingText;
     [animatingView addSubview:instance];
+    instance.request = request;
 }
 
 + (void)hideLoadingView {
@@ -95,6 +96,7 @@ static CCAlertUtils * instance = nil;
 
 - (void)tapPressed:(UITapGestureRecognizer *)gesture {
     [self removeFromSuperview];
+    [(CCRequest *)_request stop];
 }
 
 /*

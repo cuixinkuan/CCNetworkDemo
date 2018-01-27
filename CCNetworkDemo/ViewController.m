@@ -58,20 +58,48 @@
 }
 
 - (void)loadCacheData {
-    NSString * userId = @"54534534";
-    GetUserInfoApi * api = [[GetUserInfoApi alloc] initWithUserId:userId];
-    if ([api loadCacheWithError:nil]) {
-        NSDictionary * json = [api responseJSONObject];
-        // show failed cached data
-        NSLog(@"-------> json = %@",json);
-    }
+//    NSString * userId = @"54534534";
+//    GetUserInfoApi * api = [[GetUserInfoApi alloc] initWithUserId:userId];
+//    if ([api loadCacheWithError:nil]) {
+//        NSDictionary * json = [api responseJSONObject];
+//        // show failed cached data
+//        NSLog(@"-------> json = %@",json);
+//    }
     
+    // 传参
+    NSString * startKey = @"username";
+    NSString * endKey = @"password";
+    NSString * starDateStr = @"13120829059";
+    NSString * endDateStr = @"123456";
+    NSMutableDictionary * para = [NSMutableDictionary dictionary];
+    [para setObject:startKey forKey:@"startkey"];
+    [para setObject:starDateStr forKey:@"startvalue"];
+    [para setObject:endKey forKey:@"endkey"];
+    [para setObject:endDateStr forKey:@"endvalue"];
+    
+    GetUserInfoApi * api = [[GetUserInfoApi alloc] initWithParameters:para];
     api.animatingView = self.view;
     api.animatingText = @"正在加载...";
     [api startWithCompletionBlockWithSuccess:^(__kindof CCBaseRequest * _Nonnull request) {
-        NSLog(@"-------> update ui !!!");
+        
+        UIAlertController * alertVc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请求成功！" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction * cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+           // cancel...
+        }];
+        UIAlertAction * sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            // sure...
+            NSLog(@"-------> update UI !!!");
+            NSDictionary * parameters = request.responseJSONObject;
+            NSLog(@"------->Json:%@",parameters);
+        }];
+        [alertVc addAction:cancelAction];
+        [alertVc addAction:sureAction];
+        [self presentViewController:alertVc animated:YES completion:^{
+           //
+        }];
     } failure:^(__kindof CCBaseRequest * _Nonnull request) {
         NSLog(@"-------> request failed...");
+        NSLog(@"------->Error:%@",request.error.description);
     }];
     
 }
